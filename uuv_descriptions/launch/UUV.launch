@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+ <include file="$(find uuv_gazebo_worlds)/launch/ocean_waves.launch"/>
+<!-- <include file="$(find uuv_descriptions)/launch/upload_rexrov.launch">
+  <arg name = "z" value = "0"/>
+  <arg name = "namespace" value = "rexrov_1"/>
+ </include>-->
+ <include file="$(find uuv_descriptions)/launch/upload_rexrov.launch">
+  <arg name = "z" value = "-20"/>
+  <arg name = "x" value = "20"/>
+ </include>
+ <include file="$(find uuv_thruster_manager)/launch/thruster_manager.launch">
+  <arg name = "reset_tam" value = "true"/>
+ </include>
+<!-- <include file="$(find uuv_thruster_manager)/launch/thruster_manager.launch">
+  <arg name = "reset_tam" value = "true"/>
+  <arg name = "model_name" value = "rexrov_1"/>
+ </include>-->
+<!-- <node pkg= "uuv_thruster_manager" type="thruster_input.py" name="thruster_input" output="screen"/>-->
+</launch>

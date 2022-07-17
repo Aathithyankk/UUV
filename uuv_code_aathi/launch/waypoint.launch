@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+ <include file="$(find uuv_tutorial_dp_controller)/launch/start_tutorial_dp_controller_demo.launch"/>
+ <include file="$(find uuv_control_utils)/launch/send_waypoints_file.launch">
+  <arg name = "uuv_name" value = "rexrov"/>
+ </include>
+ <include file="$(find uuv_control_utils)/launch/send_waypoints_file.launch">
+  <arg name = "uuv_name" value = "rexrov_1"/>
+ </include>
+</launch>
